@@ -63,7 +63,8 @@ form.addEventListener('submit', function(event) {
   // Check age limit
   if (age < 18 || age > 55) {
     alert("You must be between 18 and 55 years old to register.");
-    return;
+    return; 
+    
   }
 
   // Create a new entry object and add to table and localStorage
