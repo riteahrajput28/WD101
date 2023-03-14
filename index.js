@@ -43,6 +43,14 @@ storedEntries.forEach(entry => {
   addEntryToTable(entry.name, entry.email, entry.password, entry.dob, entry.acceptedTerms);
 });
 
+// Define a function to display error message below the form field
+function displayError(field, message) {
+  const errorDiv = document.createElement('div');
+  errorDiv.classList.add('form-error');
+  errorDiv.innerText = message;
+  field.parentNode.appendChild(errorDiv);
+}
+
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   const name = form.elements['name'].value;
@@ -51,9 +59,19 @@ form.addEventListener('submit', function(event) {
   const dob = form.elements['dob'].value;
   const terms = form.elements['acceptedTerms'].checked;
 
+  // Remove existing error messages
+  const errorDivs = form.querySelectorAll('.form-error');
+  errorDivs.forEach(div => div.remove());
+
+  // Validate name field
+  if (!name) {
+    displayError(form.elements['name'], 'Name is required.');
+    return;
+  }
+
   // Validate email address
   if (!validateEmail(email)) {
-    alert("Please enter a valid email address.");
+    displayError(form.elements['email'], 'Please enter a valid email address.');
     return;
   }
 
@@ -62,9 +80,14 @@ form.addEventListener('submit', function(event) {
 
   // Check age limit
   if (age < 18 || age > 55) {
-    alert("You must be between 18 and 55 years old to register.");
-    return; 
-    
+    displayError(form.elements['dob'], 'You must be between 18 and 55 years old to register.');
+    return;
+  }
+
+  // Check if terms and conditions are accepted
+  if (!terms) {
+    displayError(form.elements['acceptedTerms'], 'Please accept the terms and conditions.');
+    return;
   }
 
   // Create a new entry object and add to table and localStorage
