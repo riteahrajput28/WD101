@@ -1,87 +1,93 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html> 
 <head> 
-  <title>Registration Form</title>
-  <style>
-    /* CSS styles for the registration form */
-    form {
-      width: 400px;
-      margin: 0 auto;
-    }
-    input[type=text], input[type=email], input[type=password], input[type=date] {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-    label {
-      display: block;
-      font-weight: bold;
-    }
-    input[type=checkbox] {
-      margin-right: 5px;
-    }
-    .accept-terms {
-      margin-bottom: 10px;
-    }
-    .submit-btn {
-      background-color: green;
-      color: white;
-      padding: 14px 20px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .form-errors {
-      border: 30px red;
-      color: red;
-      margin-top: 10px;
-    }
-    /* CSS styles for the entries table */
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-  </style>
-</head>
-<body>
-  <form id="registration-form">
-    <label for="username">Name:</label>
-    <input type="text" id="name" name="name" required>
+<title>Registration Form</title> 
+<style> 
+/* CSS styles for the registration form */ 
+form { 
+  width: 400px; 
+  margin: 0 auto; 
+} 
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+input[type=text], input[type=email], input[type=password], input[type=date] { 
+  width: 100%; 
+  padding: 12px 20px; 
+  margin: 8px 0; 
+  display: inline-block; 
+  border: 1px solid #ccc; 
+  box-sizing: border-box; 
+} 
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+label { 
+  display: block; 
+  font-weight: bold; 
+} 
 
-    <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dob" required>
+input[type=checkbox] { 
+  margin-right: 5px; 
+} 
 
-    <label for="accept-terms" class="accept-terms">
-      <input type="checkbox" id="acceptedTerms" name="accept terms?" required>
-      Accept terms and Conditions
-    </label>
+.accept-terms { 
+  margin-bottom: 10px; 
+} 
 
-    <button type="submit" class="submit-btn">Submit</button> 
+.submit-btn { 
+  background-color: green; 
+  color: white; 
+  padding: 14px 20px; 
+  margin-top: 10px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+} 
 
-    <div id="form-errors" class="form-errors"></div>
-  </form>
+.form-errors { 
+  border: 30px red; 
+  color: red; 
+  margin-top: 10px; 
+} 
 
-  <table id="entries-table">
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Password</th>
-      <th>Dob</th>
-      <th>Accepted terms?</th>
-    </tr>
-  </table>
+/* CSS styles for the entries table */ 
+table { 
+  border-collapse: collapse; 
+  width: 100%; 
+} 
+</style> 
+</head> 
 
-  <script src="index.js"></script>
+<body> 
+<form id="registration-form"> 
+  <label for="username">Name:</label> 
+  <input type="text" id="name" name="name" required> 
+
+  <label for="email">Email:</label> 
+  <input type="email" id="email" name="email" required> 
+
+  <label for="password">Password:</label> 
+  <input type="password" id="password" name="password" required> 
+
+  <label for="dob">Date of Birth:</label> 
+  <input type="date" id="dob" name="dob" required> 
+
+  <label for="accept-terms" class="accept-terms"> 
+    <input type="checkbox" id="acceptedTerms" name="accept terms?" required> Accept terms and Conditions 
+  </label> 
+
+  <button type="submit" class="submit-btn">Submit</button> 
+
+  <div id="form-errors" class="form-errors"></div> 
+</form> 
+
+<table id="entries-table"> 
+  <tr> 
+    <th>Name</th> 
+    <th>Email</th> 
+    <th>Password</th> 
+    <th>Dob</th> 
+    <th>Accepted terms?</th> 
+  </tr> 
+</table>
+  
+ <script src="index.js"></script>
 </body>
 </html>
