@@ -39,7 +39,7 @@ function calculateAge(dob) {
 
 // Load existing entries from localStorage
 storedEntries.forEach(entry => {
-  addEntryToTable(entry.name, entry.email, entry.password, entry.dob, entry.acceptedTerms);
+  addEntryToTable(entry.name, entry.email, entry.password, entry.dob, entry.terms);
 });
 
 form.addEventListener('submit', function(event) {
