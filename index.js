@@ -80,7 +80,7 @@ form.addEventListener('submit', function(event) {
 
   // Check age limit
   if (age < 18 || age > 55) {
-    displayError(form.elements['dob'], 'You must be between 18 and 55 years old to register.');
+    " You must be between 18 and 55 years old to register.");
     return;
   }
 
